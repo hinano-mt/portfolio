@@ -900,32 +900,7 @@
                 プロジェクトの概要説明が入ります。
               </p>
             </div>
-            <div>
-              <h4
-                class="text-[10px] uppercase tracking-[0.2em] text-brand-text font-medium mb-3"
-              >
-                02. 課題 (Challenge)
-              </h4>
-              <p
-                id="modalChallenge"
-                class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
-              >
-                どのようなビジネス上の課題や、エンドユーザーの不満（ペインポイント）があったかを記載します。
-              </p>
-            </div>
-            <div>
-              <h4
-                class="text-[10px] uppercase tracking-[0.2em] text-brand-text font-medium mb-3"
-              >
-                03. 解決策 & 成果 (Solution & Impact)
-              </h4>
-              <p
-                id="modalSolution"
-                class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
-              >
-                実施したデザイン・マーケティングプロセスと、最終的な具体的な定量/定性効果を記載します。
-              </p>
-            </div>
+            <!-- (Challenge と Solution セクションは省略されました) -->
           </div>
         </div>
       </div>
@@ -1256,8 +1231,6 @@
         document.getElementById("modalDeliverables").textContent =
           data.deliverables;
         document.getElementById("modalOverview").textContent = data.overview;
-        document.getElementById("modalChallenge").textContent = data.challenge;
-        document.getElementById("modalSolution").textContent = data.solution;
         renderModalImages(data.images);
 
         const modal = document.getElementById("detailModal");
