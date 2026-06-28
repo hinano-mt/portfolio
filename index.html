@@ -304,6 +304,8 @@
                 src="https://via.placeholder.com/1200x800?text=LIFESTYLE+HUB+1"
                 alt="LIFESTYLE HUB"
               />
+              <!-- Carousel dots -->
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -337,6 +339,8 @@
                 src="https://via.placeholder.com/1200x800?text=MediFlow+UI+1"
                 alt="MediFlow UI"
               />
+              <!-- Carousel dots -->
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -370,6 +374,8 @@
                 src="https://via.placeholder.com/1200x800?text=SAKURA+Package+1"
                 alt="SAKURA Package"
               />
+              <!-- Carousel dots -->
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -403,6 +409,8 @@
                 src="https://via.placeholder.com/1200x800?text=MoneyArch+Campaign+1"
                 alt="MoneyArch Campaign"
               />
+              <!-- Carousel dots -->
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -1027,11 +1035,41 @@
       // Portfolio item carousel state management
       const itemCarousels = {};
 
+      function renderItemDots(itemId) {
+        const images = worksDatabase[itemId]?.images || [];
+        const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
+        const dotsContainer = item?.querySelector(".item-dots");
+
+        if (!dotsContainer || images.length <= 1) return;
+
+        dotsContainer.innerHTML = images
+          .map(
+            (_, idx) =>
+              `<button type="button" class="item-dot w-2 h-2 rounded-full transition-colors ${
+                idx === 0 ? "bg-brand-text" : "bg-brand-border"
+              }" data-slide="${idx}" onclick="event.stopPropagation()"></button>`,
+          )
+          .join("");
+      }
+
+      function updateItemDots(itemId, slideIndex) {
+        const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
+        const dots = item?.querySelectorAll(".item-dot");
+
+        if (!dots) return;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("bg-brand-text", idx === slideIndex);
+          dot.classList.toggle("bg-brand-border", idx !== slideIndex);
+        });
+      }
+
       function startItemCarousel(itemId) {
         if (itemCarousels[itemId]) return;
         const images = worksDatabase[itemId]?.images || [];
         if (images.length <= 1) return;
 
+        renderItemDots(itemId);
         let currentSlide = 0;
         const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
         const img = item?.querySelector(".item-image");
@@ -1045,6 +1083,7 @@
             img.src = images[currentSlide].src;
             img.alt = images[currentSlide].alt;
             img.style.opacity = "1";
+            updateItemDots(itemId, currentSlide);
           }, 150);
         }, 4000);
 
