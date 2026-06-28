@@ -835,6 +835,43 @@
             </h2>
           </div>
 
+          <!-- Image Carousel -->
+          <div class="space-y-4">
+            <div
+              class="relative overflow-hidden rounded-none border border-brand-border bg-[#FAF8F5]"
+            >
+              <img
+                id="modalImage"
+                src=""
+                alt="Project image"
+                class="w-full h-[260px] sm:h-[340px] object-cover"
+              />
+              <button
+                id="modalPrev"
+                type="button"
+                class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 border border-brand-border px-3 py-2 text-brand-text shadow-sm hover:bg-brand-bg transition-colors"
+                aria-label="前の画像"
+              >
+                ‹
+              </button>
+              <button
+                id="modalNext"
+                type="button"
+                class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 border border-brand-border px-3 py-2 text-brand-text shadow-sm hover:bg-brand-bg transition-colors"
+                aria-label="次の画像"
+              >
+                ›
+              </button>
+              <div
+                id="modalImageCounter"
+                class="absolute left-1/2 bottom-4 -translate-x-1/2 rounded-full bg-brand-bg/90 px-3 py-1 text-[10px] tracking-[0.2em] text-brand-textMuted"
+              >
+                1 / 1
+              </div>
+            </div>
+            <div id="modalDots" class="flex justify-center gap-2"></div>
+          </div>
+
           <!-- Specs Grid -->
           <div
             class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-8 border-y border-brand-border text-xs"
@@ -943,6 +980,16 @@
             "従来のECシステムが画一的なテンプレートだったため、ブランドの独自性が伝わらず直帰率が高い状態（55%）にありました。また、商品撮影のクオリティが統一されていない課題がありました。",
           solution:
             "余白と美しい明朝フォントを重視した、ブランドオリジナルの「メディアコマース型UI」を設計。さらに、購入フロー全体のUXを見直し決済完了率を22%向上させました。",
+          images: [
+            {
+              src: "https://via.placeholder.com/1200x800?text=LIFESTYLE+HUB+1",
+              alt: "LIFESTYLE HUB プラットフォーム ビジュアル 1",
+            },
+            {
+              src: "https://via.placeholder.com/1200x800?text=LIFESTYLE+HUB+2",
+              alt: "LIFESTYLE HUB プラットフォーム ビジュアル 2",
+            },
+          ],
         },
         2: {
           category: "UX Design",
@@ -957,6 +1004,16 @@
             "これまでの電子カルテはメニューが複雑怪奇で、看護師がシフト中に平均30回以上の入力エラーを起こしており、医療現場の負荷が深刻化していました。",
           solution:
             "実際の臨床現場に3日間同行し、業務フローのコンテキスト調査（エスノグラフィ）を実施。タップ数の少ない階層構造へ全面改訂し、医療機器特有のダークモード対応や、エラー警告の重要度に応じた色設計（デザインシステム）を完了しました。",
+          images: [
+            {
+              src: "https://via.placeholder.com/1200x800?text=MediFlow+UI+1",
+              alt: "MediFlow UI デザイン 1",
+            },
+            {
+              src: "https://via.placeholder.com/1200x800?text=MediFlow+UI+2",
+              alt: "MediFlow UI デザイン 2",
+            },
+          ],
         },
         3: {
           category: "Graphic Design",
@@ -971,6 +1028,16 @@
             "「和風クラフトジン」は競合が多く、店頭や海外のバーで埋もれてしまうリスクがありました。また、「日本の伝統」と「モダンなカクテル文化」の絶妙なバランスを取る必要がありました。",
           solution:
             "日本の伝統的な手漉き和紙のテナンシーをボトルラベルに採用しつつ、ロゴは極限までミニマルな幾何学的フォントを新規開発。海外のコンペティションでパッケージデザイン部門賞を受賞しました。",
+          images: [
+            {
+              src: "https://via.placeholder.com/1200x800?text=SAKURA+Package+1",
+              alt: "SAKURA ボトルパッケージ デザイン 1",
+            },
+            {
+              src: "https://via.placeholder.com/1200x800?text=SAKURA+Package+2",
+              alt: "SAKURA ボトルパッケージ デザイン 2",
+            },
+          ],
         },
         4: {
           category: "Marketing Planning",
@@ -985,8 +1052,65 @@
             "プロダクト力は非常に高いものの、認知度がゼロであり、ターゲットである「経理担当・経営者」が日々の業務に忙殺され広告をクリックしてくれないという課題がありました。",
           solution:
             "お役立ちホワイトペーパー（「経営者のためのキャッシュフロー改善10選」）を企画制作し、パーソナライズされたLinkedIn/Facebook広告を配信。リード獲得単価（CPA）を業界平均から35%削減し、初期登録社数を目標比142%で達成しました。",
+          images: [
+            {
+              src: "https://via.placeholder.com/1200x800?text=MoneyArch+Campaign+1",
+              alt: "MoneyArch キャンペーン ビジュアル 1",
+            },
+            {
+              src: "https://via.placeholder.com/1200x800?text=MoneyArch+Campaign+2",
+              alt: "MoneyArch キャンペーン ビジュアル 2",
+            },
+          ],
         },
       };
+
+      // Modal image carousel state
+      let modalImages = [];
+      let modalCurrentSlide = 0;
+
+      function showModalSlide(index) {
+        if (!modalImages.length) return;
+        modalCurrentSlide = (index + modalImages.length) % modalImages.length;
+
+        const imageData = modalImages[modalCurrentSlide];
+        const imageEl = document.getElementById("modalImage");
+        const counterEl = document.getElementById("modalImageCounter");
+        const dots = document.querySelectorAll("#modalDots button");
+
+        imageEl.src = imageData.src;
+        imageEl.alt = imageData.alt || `Project image ${modalCurrentSlide + 1}`;
+        counterEl.textContent = `${modalCurrentSlide + 1} / ${modalImages.length}`;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("bg-brand-text", idx === modalCurrentSlide);
+          dot.classList.toggle("bg-brand-border", idx !== modalCurrentSlide);
+        });
+      }
+
+      function renderModalImages(images = []) {
+        const dotsWrapper = document.getElementById("modalDots");
+        modalImages = images.length
+          ? images
+          : [
+              {
+                src: "https://via.placeholder.com/1200x800?text=Image+Unavailable",
+                alt: "画像がありません",
+              },
+            ];
+        modalCurrentSlide = 0;
+
+        dotsWrapper.innerHTML = modalImages
+          .map(
+            (_, idx) =>
+              `<button type="button" class="w-2.5 h-2.5 rounded-full transition-colors ${
+                idx === 0 ? "bg-brand-text" : "bg-brand-border"
+              }" aria-label="Slide ${idx + 1}" onclick="showModalSlide(${idx})"></button>`,
+          )
+          .join("");
+
+        showModalSlide(0);
+      }
 
       // Mobile Menu Toggle
       const menuBtn = document.getElementById("menuBtn");
@@ -1003,6 +1127,13 @@
           mobileMenu.classList.add("hidden");
           mobileMenuOverlay.classList.add("hidden");
         });
+      });
+
+      document.getElementById("modalPrev").addEventListener("click", () => {
+        showModalSlide(modalCurrentSlide - 1);
+      });
+      document.getElementById("modalNext").addEventListener("click", () => {
+        showModalSlide(modalCurrentSlide + 1);
       });
 
       // Portfolio Filter Logic (La Cabra style text borders)
@@ -1055,6 +1186,7 @@
         document.getElementById("modalOverview").textContent = data.overview;
         document.getElementById("modalChallenge").textContent = data.challenge;
         document.getElementById("modalSolution").textContent = data.solution;
+        renderModalImages(data.images);
 
         const modal = document.getElementById("detailModal");
         const container = document.getElementById("modalContainer");
