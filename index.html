@@ -723,34 +723,18 @@
               <span>01 / TOKYO</span>
             </div>
 
-            <div class="my-12 flex justify-center items-center">
-              <svg
-                class="w-24 h-24 text-brand-text/10"
-                viewBox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="30"
-                  stroke="currentColor"
-                  stroke-width="0.75"
-                />
-                <path
-                  d="M50 10 V90"
-                  stroke="currentColor"
-                  stroke-width="0.75"
-                  stroke-dasharray="2 2"
-                />
-                <path
-                  d="M10 50 H90"
-                  stroke="currentColor"
-                  stroke-width="0.75"
-                  stroke-dasharray="2 2"
-                />
-              </svg>
-            </div>
+            <div class="w-full h-full overflow-hidden border border-brand-border/60 mb-4 bg-brand-bgSecondary">
+      <img 
+        src="images/profile.jpg" 
+        alt="Hinano Matoba" 
+        class="w-full h-full object-cover"
+        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')"
+      />
+      <!-- 写真が読み込めないとき用のシンプルな文字プレースホルダー -->
+      <div class="hidden w-full h-full flex items-center justify-center text-xs text-brand-textMuted tracking-widest">
+        PHOTO
+      </div>
+    </div>
 
             <div class="text-center">
               <span class="font-serif italic text-brand-text text-sm block"
