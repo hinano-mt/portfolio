@@ -121,10 +121,20 @@
         </button>
       </div>
 
+      <!-- Mobile Drawer Overlay -->
+      <div
+        id="mobileMenuOverlay"
+        class="hidden fixed inset-0 bg-black/20 z-30 md:hidden"
+        onclick="
+          document.getElementById('mobileMenu').classList.add('hidden');
+          document.getElementById('mobileMenuOverlay').classList.add('hidden');
+        "
+      ></div>
+
       <!-- Mobile Drawer -->
       <div
         id="mobileMenu"
-        class="hidden fixed inset-0 top-20 bg-brand-bg z-40 flex flex-col p-10 space-y-8 border-t border-brand-border transition-all duration-300"
+        class="hidden fixed top-20 right-0 bottom-0 w-64 bg-brand-bgSecondary z-40 flex flex-col p-10 space-y-8 border-l border-brand-border transition-all duration-300 md:hidden"
       >
         <a
           href="#portfolio"
@@ -980,14 +990,17 @@
       // Mobile Menu Toggle
       const menuBtn = document.getElementById("menuBtn");
       const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
 
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+        mobileMenuOverlay.classList.toggle("hidden");
       });
 
       document.querySelectorAll(".mobile-link").forEach((link) => {
         link.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
+          mobileMenuOverlay.classList.add("hidden");
         });
       });
 
