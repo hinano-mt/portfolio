@@ -296,7 +296,7 @@
             onclick="openModal(1)"
           >
             <div
-              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center p-8 overflow-hidden"
+              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <!-- Carousel container -->
               <img
@@ -330,7 +330,7 @@
             onclick="openModal(2)"
           >
             <div
-              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center p-8 overflow-hidden"
+              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
@@ -363,7 +363,7 @@
             onclick="openModal(3)"
           >
             <div
-              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center p-8 overflow-hidden"
+              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
@@ -396,7 +396,7 @@
             onclick="openModal(4)"
           >
             <div
-              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center p-8 overflow-hidden"
+              class="item-image-wrapper aspect-[16/10] bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
@@ -1033,17 +1033,19 @@
         if (images.length <= 1) return;
 
         let currentSlide = 0;
-        const wrapper = document.querySelector(
-          `.portfolio-item[data-id="${itemId}"] .item-image-wrapper`,
-        );
-        const img = wrapper?.querySelector(".item-image");
+        const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
+        const img = item?.querySelector(".item-image");
+
+        if (!img) return;
 
         const timer = setInterval(() => {
           currentSlide = (currentSlide + 1) % images.length;
-          if (img) {
+          img.style.opacity = "0";
+          setTimeout(() => {
             img.src = images[currentSlide].src;
             img.alt = images[currentSlide].alt;
-          }
+            img.style.opacity = "1";
+          }, 150);
         }, 4000);
 
         itemCarousels[itemId] = timer;
@@ -1058,21 +1060,19 @@
 
       // Initialize portfolio item carousels on page load
       function initPortfolioCarousels() {
-        document.querySelectorAll(".portfolio-item").forEach((item) => {
-          const itemId = parseInt(item.getAttribute("data-id"));
-          const wrapper = item.querySelector(".item-image-wrapper");
+        setTimeout(() => {
+          document.querySelectorAll(".portfolio-item[data-id]").forEach((item) => {
+            const itemId = parseInt(item.getAttribute("data-id"));
+            const img = item.querySelector(".item-image");
 
-          if (wrapper) {
-            wrapper.addEventListener("mouseenter", () => {
+            if (img) {
+              img.style.transition = "opacity 0.3s ease-in-out";
+              img.style.opacity = "1";
+              // Always start autoplay
               startItemCarousel(itemId);
-            });
-            wrapper.addEventListener("mouseleave", () => {
-              stopItemCarousel(itemId);
-            });
-            // Always start autoplay
-            startItemCarousel(itemId);
-          }
-        });
+            }
+          });
+        }, 100);
       }
 
       // Modal image carousel state
