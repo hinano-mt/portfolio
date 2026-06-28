@@ -1069,6 +1069,27 @@
       // Modal image carousel state
       let modalImages = [];
       let modalCurrentSlide = 0;
+      let autoplayTimer = null;
+      const AUTOPLAY_INTERVAL = 4000; // 4秒
+
+      function startAutoplay() {
+        if (modalImages.length <= 1) return;
+        autoplayTimer = setInterval(() => {
+          showModalSlide(modalCurrentSlide + 1);
+        }, AUTOPLAY_INTERVAL);
+      }
+
+      function stopAutoplay() {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+      }
+
+      function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+      }
 
       function showModalSlide(index) {
         if (!modalImages.length) return;
@@ -1087,6 +1108,8 @@
           dot.classList.toggle("bg-brand-text", idx === modalCurrentSlide);
           dot.classList.toggle("bg-brand-border", idx !== modalCurrentSlide);
         });
+
+        resetAutoplay();
       }
 
       function renderModalImages(images = []) {
@@ -1111,6 +1134,7 @@
           .join("");
 
         showModalSlide(0);
+        startAutoplay();
       }
 
       // Mobile Menu Toggle
@@ -1132,9 +1156,11 @@
 
       document.getElementById("modalPrev").addEventListener("click", () => {
         showModalSlide(modalCurrentSlide - 1);
+        resetAutoplay();
       });
       document.getElementById("modalNext").addEventListener("click", () => {
         showModalSlide(modalCurrentSlide + 1);
+        resetAutoplay();
       });
 
       // Portfolio Filter Logic (La Cabra style text borders)
@@ -1205,6 +1231,7 @@
         const modal = document.getElementById("detailModal");
         const container = document.getElementById("modalContainer");
 
+        stopAutoplay();
         container.classList.remove("scale-100", "opacity-100");
         container.classList.add("scale-95", "opacity-0");
 
