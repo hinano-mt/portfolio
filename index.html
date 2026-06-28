@@ -1031,7 +1031,7 @@
       class="hidden fixed inset-0 z-50 overflow-y-auto bg-brand-bg/90 backdrop-blur-sm flex items-start sm:items-center justify-center p-4 pt-8 sm:pt-0"
     >
       <div
-        class="bg-brand-bg border border-brand-border max-w-3xl w-full rounded-none overflow-hidden relative shadow-sm transition-all duration-300 scale-95 opacity-0 pt-12 sm:pt-16"
+        class="bg-brand-bg border border-brand-border max-w-3xl w-full rounded-none max-h-[90vh] overflow-y-auto relative shadow-sm transition-all duration-300 scale-95 opacity-0 pt-12 sm:pt-16"
         id="modalContainer"
       >
         <!-- Close Button -->
@@ -1650,16 +1650,19 @@
 
         const modal = document.getElementById("detailModal");
         const container = document.getElementById("modalContainer");
-          modal.classList.remove("hidden");
-          // Ensure modal content is scrolled to top so title is visible
+        modal.classList.remove("hidden");
+        // After rendering, ensure modal content is scrolled to top so title is visible
+        setTimeout(() => {
           try {
             modal.scrollTop = 0;
             container.scrollTop = 0;
-            // also ensure container is centered in viewport
             container.scrollIntoView({ block: "center", inline: "nearest" });
+            const title = document.getElementById("modalTitle");
+            if (title) title.scrollIntoView({ block: "center" });
           } catch (e) {
             // ignore if scrolling not supported
           }
+        }, 80);
         setTimeout(() => {
           container.classList.remove("scale-95", "opacity-0");
           container.classList.add("scale-100", "opacity-100");
