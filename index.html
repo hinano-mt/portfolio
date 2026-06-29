@@ -298,9 +298,10 @@
         >
           <!-- New Item: WAKASA App Store LP (inserted at top) -->
           <div
-            class="portfolio-item group bg-brand-bg border border-brand-border p-6 transition-all duration-500"
+            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
             data-id="12"
+            onclick="openModal(12)"
           >
             <div
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
@@ -317,7 +318,7 @@
                 class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
               ></div>
             </div>
-            <div class="pt-6 space-y-4">
+            <div class="pt-6 flex justify-between items-start">
               <div>
                 <span
                   class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1"
@@ -327,14 +328,10 @@
                   WAKASA App Store LP
                 </h3>
               </div>
-              <a
-                href="https://shop.wakasa.jp/np/app_store/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-block text-[11px] tracking-[0.2em] uppercase font-medium text-brand-text border border-brand-border px-4 py-3 hover:bg-brand-accent hover:text-white transition-colors duration-300"
+              <span
+                class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Explore &rarr;</span
               >
-                LPを見る
-              </a>
             </div>
           </div>
 
@@ -1599,6 +1596,7 @@
           role: "Web Design & Front-end",
           duration: "1 Month (2026)",
           deliverables: "Landing Page, Responsive HTML/CSS",
+          externalUrl: "https://shop.wakasa.jp/np/app_store/",
           overview:
             "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
           images: [
