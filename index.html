@@ -161,8 +161,17 @@
 
     <!-- Hero Section -->
     <section
-      class="min-h-[66vh] flex flex-col justify-center pt-24 px-6 md:px-12 relative overflow-hidden"
+      class="min-h-[66vh] flex items-center pt-24 px-6 md:px-12 relative overflow-hidden"
     >
+      <div class="absolute inset-0 overflow-hidden">
+        <img
+          src="https://via.placeholder.com/1920x1080?text=WAKASA+App+Store+LP+Hero"
+          alt="WAKASA App Store LP Hero"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-brand-bg/75"></div>
+      </div>
+
       <!-- Quiet architectural grid guide (La Cabra style) -->
       <div
         class="absolute inset-0 grid grid-cols-4 pointer-events-none opacity-[0.03]"
@@ -181,7 +190,6 @@
         <h1
           class="font-serif font-light tracking-[0.05em] text-brand-text mb-10 flex flex-wrap sm:flex-nowrap items-end gap-6 sm:gap-12"
         >
-          <span class="text-[3rem] sm:text-[5rem] lg:text-[5.5rem] leading-none"
           <span class="text-[3rem] sm:text-[5rem] lg:text-[5.5rem] leading-none"
             >Portfolio</span
           >
@@ -290,12 +298,13 @@
         >
           <!-- New Item: WAKASA App Store LP (inserted at top) -->
           <div
-            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
+            class="portfolio-item group bg-brand-bg border border-brand-border p-6 transition-all duration-500"
             data-category="web"
             data-id="12"
-            onclick="openModal(12)"
           >
-            <div class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden">
+            <div
+              class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
+            >
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 src="https://via.placeholder.com/1200x800?text=WAKASA+App+LP"
@@ -304,14 +313,28 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
-            <div class="pt-6 flex justify-between items-start">
+            <div class="pt-6 space-y-4">
               <div>
-                <span class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1">Web Design</span>
-                <h3 class="text-base font-serif text-brand-text font-light">WAKASA App Store LP</h3>
+                <span
+                  class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1"
+                  >Web Design</span
+                >
+                <h3 class="text-base font-serif text-brand-text font-light">
+                  WAKASA App Store LP
+                </h3>
               </div>
-              <span class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explore &rarr;</span>
+              <a
+                href="https://shop.wakasa.jp/np/app_store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block text-[11px] tracking-[0.2em] uppercase font-medium text-brand-text border border-brand-border px-4 py-3 hover:bg-brand-accent hover:text-white transition-colors duration-300"
+              >
+                LPを見る
+              </a>
             </div>
           </div>
 
@@ -322,7 +345,9 @@
             data-id="13"
             onclick="openModal(13)"
           >
-            <div class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden">
+            <div
+              class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
+            >
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/fukubukuro_front.jpg"
@@ -331,41 +356,63 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
-                <span class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1">Graphic Design</span>
-                <h3 class="text-base font-serif text-brand-text font-light">福袋同封あいさつ状</h3>
+                <span
+                  class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1"
+                  >Graphic Design</span
+                >
+                <h3 class="text-base font-serif text-brand-text font-light">
+                  福袋同封あいさつ状
+                </h3>
               </div>
-              <span class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explore &rarr;</span>
+              <span
+                class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Explore &rarr;</span
+              >
             </div>
           </div>
 
-          <!-- New Item: Shapes of Balance Poster (Graphic Design) -->
+          <!-- New Item: Poster  (Graphic Design) -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="graphic"
             data-id="14"
             onclick="openModal(14)"
           >
-            <div class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden">
+            <div
+              class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
+            >
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                src="images/shapes_of_balance.jpg"
-                alt="Shapes of Balance Poster"
+                src="images/poster.jpg"
+                alt="Poster"
                 loading="lazy"
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
-                <span class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1">Graphic Design</span>
-                <h3 class="text-base font-serif text-brand-text font-light">Shapes of Balance Poster</h3>
+                <span
+                  class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1"
+                  >Graphic Design</span
+                >
+                <h3 class="text-base font-serif text-brand-text font-light">
+                  ポスター
+                </h3>
               </div>
-              <span class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explore &rarr;</span>
+              <span
+                class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Explore &rarr;</span
+              >
             </div>
           </div>
           <!-- Item 1: Web Design -->
@@ -388,7 +435,9 @@
                 fetchpriority="low"
               />
               <!-- Carousel dots -->
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -426,7 +475,9 @@
                 fetchpriority="low"
               />
               <!-- Carousel dots -->
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -464,7 +515,9 @@
                 fetchpriority="low"
               />
               <!-- Carousel dots -->
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -502,7 +555,9 @@
                 fetchpriority="low"
               />
               <!-- Carousel dots -->
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -539,7 +594,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -576,7 +633,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -613,7 +672,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -650,7 +711,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -687,7 +750,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -724,7 +789,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -761,7 +828,9 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -803,18 +872,25 @@
               <span>01 / TOKYO</span>
             </div>
 
-            <div class="w-full h-full overflow-hidden border border-brand-border/60 mb-4 bg-brand-bgSecondary">
-      <img 
-        src="images/profile.jpg" 
-        alt="Hinano Matoba" 
-        class="w-full h-full object-cover"
-        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')"
-      />
-      <!-- 写真が読み込めないとき用のシンプルな文字プレースホルダー -->
-      <div class="hidden w-full h-full flex items-center justify-center text-xs text-brand-textMuted tracking-widest">
-        PHOTO
-      </div>
-    </div>
+            <div
+              class="w-full h-full overflow-hidden border border-brand-border/60 mb-4 bg-brand-bgSecondary"
+            >
+              <img
+                src="images/profile.jpg"
+                alt="Hinano Matoba"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.classList.remove('hidden');
+                "
+              />
+              <!-- 写真が読み込めないとき用のシンプルな文字プレースホルダー -->
+              <div
+                class="hidden w-full h-full flex items-center justify-center text-xs text-brand-textMuted tracking-widest"
+              >
+                PHOTO
+              </div>
+            </div>
 
             <div class="text-center">
               <span class="font-serif italic text-brand-text text-sm block"
@@ -1300,7 +1376,7 @@
           deliverables: "Design,Layout,Shop Info,QR Code",
           overview:
             "カフェ、バー、サプリメントショップ、キャラクターショップなど複数の店舗を持つWAKASA&CO.のブランドショップカードを、和紙の質感を活かした高級感のあるデザインで作成。店頭でのブランド認知向上と、QRコードを通じたブランドサイト誘導を目的としました。",
-          
+
           images: [
             {
               src: "images/shopcard-lightpp-omote.png",
@@ -1349,7 +1425,7 @@
             {
               src: "images/wallpaper.jpeg",
               alt: "LINEミニゲーム 特典壁紙",
-            }
+            },
           ],
         },
         5: {
@@ -1464,58 +1540,58 @@
             },
           ],
         },
-          12: {
-            category: "Web Design",
-            title: "WAKASA App Store LP",
-            client: "株式会社わかさ生活",
-            role: "Web Design & Front-end",
-            duration: "1 Month (2026)",
-            deliverables: "Landing Page, Responsive HTML/CSS",
-            overview:
-              "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
-            images: [
-              {
-                src: "https://shop.wakasa.jp/np/app_store/",
-                alt: "WAKASA App Store LP ヒーローイメージ",
-              },
-            ],
-          },
-          13: {
-            category: "Graphic Design",
-            title: "福袋同封あいさつ状",
-            client: "株式会社わかさ生活",
-            role: "Art Direction & Graphic Designer",
-            duration: "1 Month (2026)",
-            deliverables: "Greeting Card Design, Print",
-            overview:
-              "福袋に同封する挨拶状のデザイン。和のモチーフとキャラクターを活かした親しみやすいビジュアルで、ブランド体験を高めます。",
-            images: [
-              {
-                src: "images/fukubukuro_omote.jpg",
-                alt: "福袋同封あいさつ状 表面",
-              },
-              {
-                src: "images/fukubukuro_ura.jpg",
-                alt: "福袋同封あいさつ状 裏面",
-              },
-            ],
-          },
-          14: {
-            category: "Graphic Design",
-            title: "ポスター",
-            client: "Personal",
-            role: "Poster Design",
-            duration: "Personal Project",
-            deliverables: "Poster Artwork, B2 Print",
-            overview:
-              "バランスと色彩を探求する、抽象的な幾何学ポスター。シンプルな図形と調和のとれた配色に焦点を当てた、個人の制作プロジェクト。",
-            images: [
-              {
-                src: "images/poster.jpg",
-                alt: "Shapes of Balance Poster",
-              },
-            ],
-          },
+        12: {
+          category: "Web Design",
+          title: "WAKASA App Store LP",
+          client: "株式会社わかさ生活",
+          role: "Web Design & Front-end",
+          duration: "1 Month (2026)",
+          deliverables: "Landing Page, Responsive HTML/CSS",
+          overview:
+            "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
+          images: [
+            {
+              src: "https://shop.wakasa.jp/np/app_store/",
+              alt: "WAKASA App Store LP ヒーローイメージ",
+            },
+          ],
+        },
+        13: {
+          category: "Graphic Design",
+          title: "福袋同封あいさつ状",
+          client: "株式会社わかさ生活",
+          role: "Art Direction & Graphic Designer",
+          duration: "1 Month (2026)",
+          deliverables: "Greeting Card Design, Print",
+          overview:
+            "福袋に同封する挨拶状のデザイン。和のモチーフとキャラクターを活かした親しみやすいビジュアルで、ブランド体験を高めます。",
+          images: [
+            {
+              src: "images/fukubukuro_omote.jpg",
+              alt: "福袋同封あいさつ状 表面",
+            },
+            {
+              src: "images/fukubukuro_ura.jpg",
+              alt: "福袋同封あいさつ状 裏面",
+            },
+          ],
+        },
+        14: {
+          category: "Graphic Design",
+          title: "ポスター",
+          client: "Personal",
+          role: "Poster Design",
+          duration: "Personal Project",
+          deliverables: "Poster Artwork, B2 Print",
+          overview:
+            "バランスと色彩を探求する、抽象的な幾何学ポスター。シンプルな図形と調和のとれた配色に焦点を当てた、個人の制作プロジェクト。",
+          images: [
+            {
+              src: "images/poster.jpg",
+              alt: "Shapes of Balance Poster",
+            },
+          ],
+        },
         12: {
           category: "Web Design",
           title: "WAKASA App Store LP",
@@ -1539,7 +1615,9 @@
 
       function renderItemDots(itemId) {
         const images = worksDatabase[itemId]?.images || [];
-        const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
+        const item = document.querySelector(
+          `.portfolio-item[data-id="${itemId}"]`,
+        );
         const dotsContainer = item?.querySelector(".item-dots");
 
         if (!dotsContainer || images.length <= 1) return;
@@ -1555,7 +1633,9 @@
       }
 
       function updateItemDots(itemId, slideIndex) {
-        const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
+        const item = document.querySelector(
+          `.portfolio-item[data-id="${itemId}"]`,
+        );
         const dots = item?.querySelectorAll(".item-dot");
 
         if (!dots) return;
@@ -1573,7 +1653,9 @@
 
         renderItemDots(itemId);
         let currentSlide = 0;
-        const item = document.querySelector(`.portfolio-item[data-id="${itemId}"]`);
+        const item = document.querySelector(
+          `.portfolio-item[data-id="${itemId}"]`,
+        );
         const img = item?.querySelector(".item-image");
 
         if (!img) return;
