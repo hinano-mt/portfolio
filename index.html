@@ -288,6 +288,86 @@
           id="portfolioGrid"
           class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
         >
+          <!-- New Item: WAKASA App Store LP (inserted at top) -->
+          <div
+            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
+            data-category="web"
+            data-id="12"
+            onclick="openModal(12)"
+          >
+            <div class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden">
+              <img
+                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                src="https://via.placeholder.com/1200x800?text=WAKASA+App+LP"
+                alt="WAKASA App Store LP"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+            </div>
+            <div class="pt-6 flex justify-between items-start">
+              <div>
+                <span class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1">Web Design</span>
+                <h3 class="text-base font-serif text-brand-text font-light">WAKASA App Store LP</h3>
+              </div>
+              <span class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explore &rarr;</span>
+            </div>
+          </div>
+
+          <!-- New Item: 福袋同封あいさつ状 (Graphic Design) -->
+          <div
+            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
+            data-category="graphic"
+            data-id="13"
+            onclick="openModal(13)"
+          >
+            <div class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden">
+              <img
+                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                src="images/fukubukuro_front.jpg"
+                alt="福袋同封あいさつ状 表"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+            </div>
+            <div class="pt-6 flex justify-between items-start">
+              <div>
+                <span class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1">Graphic Design</span>
+                <h3 class="text-base font-serif text-brand-text font-light">福袋同封あいさつ状</h3>
+              </div>
+              <span class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explore &rarr;</span>
+            </div>
+          </div>
+
+          <!-- New Item: Shapes of Balance Poster (Graphic Design) -->
+          <div
+            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
+            data-category="graphic"
+            data-id="14"
+            onclick="openModal(14)"
+          >
+            <div class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden">
+              <img
+                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                src="images/shapes_of_balance.jpg"
+                alt="Shapes of Balance Poster"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+              <div class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+            </div>
+            <div class="pt-6 flex justify-between items-start">
+              <div>
+                <span class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1">Graphic Design</span>
+                <h3 class="text-base font-serif text-brand-text font-light">Shapes of Balance Poster</h3>
+              </div>
+              <span class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explore &rarr;</span>
+            </div>
+          </div>
           <!-- Item 1: Web Design -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
@@ -1381,6 +1461,74 @@
             {
               src: "images/menokoto-shrine-omikuji.png",
               alt: "メノコト神社 おみくじ1回無料",
+            },
+          ],
+        },
+          12: {
+            category: "Web Design",
+            title: "WAKASA App Store LP",
+            client: "株式会社わかさ生活",
+            role: "Web Design & Front-end",
+            duration: "1 Month (2026)",
+            deliverables: "Landing Page, Responsive HTML/CSS",
+            overview:
+              "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
+            images: [
+              {
+                src: "https://via.placeholder.com/1200x800?text=WAKASA+App+LP",
+                alt: "WAKASA App Store LP ヒーローイメージ",
+              },
+            ],
+          },
+          13: {
+            category: "Graphic Design",
+            title: "福袋同封あいさつ状",
+            client: "株式会社わかさ生活",
+            role: "Art Direction & Graphic Designer",
+            duration: "1 Month (2026)",
+            deliverables: "Greeting Card Design, Print",
+            overview:
+              "福袋に同封する挨拶状のデザイン。和のモチーフとキャラクターを活かした親しみやすいビジュアルで、ブランド体験を高めます。",
+            images: [
+              {
+                src: "images/fukubukuro_front.jpg",
+                alt: "福袋同封あいさつ状 表面",
+              },
+              {
+                src: "images/fukubukuro_back.jpg",
+                alt: "福袋同封あいさつ状 裏面",
+              },
+            ],
+          },
+          14: {
+            category: "Graphic Design",
+            title: "Shapes of Balance Poster",
+            client: "Personal",
+            role: "Poster Design",
+            duration: "Personal Project",
+            deliverables: "Poster Artwork, Print-ready PDF",
+            overview:
+              "Abstract geometric poster exploring balance and color. Personal project focusing on simple shapes and harmonious palette.",
+            images: [
+              {
+                src: "images/shapes_of_balance.jpg",
+                alt: "Shapes of Balance Poster",
+              },
+            ],
+          },
+        12: {
+          category: "Web Design",
+          title: "WAKASA App Store LP",
+          client: "株式会社わかさ生活",
+          role: "Web Design & Front-end",
+          duration: "1 Month (2026)",
+          deliverables: "Landing Page, Responsive HTML/CSS",
+          overview:
+            "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
+          images: [
+            {
+              src: "https://via.placeholder.com/1200x800?text=WAKASA+App+LP",
+              alt: "WAKASA App Store LP ヒーローイメージ",
             },
           ],
         },
