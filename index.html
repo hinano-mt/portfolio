@@ -291,7 +291,7 @@
           id="portfolioGrid"
           class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
         >
-          <!-- New Item: WAKASA App Store LP (inserted at top) -->
+          <!-- Item: WAKASA App Store LP -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
@@ -330,7 +330,7 @@
             </div>
           </div>
 
-          <!-- New Item: 福袋同封あいさつ状 (Graphic Design) -->
+          <!-- Item: 福袋同封あいさつ状 -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="graphic"
@@ -369,7 +369,7 @@
             </div>
           </div>
 
-          <!-- New Item: Poster  (Graphic Design) -->
+          <!-- Item: Poster -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="graphic"
@@ -407,17 +407,17 @@
               >
             </div>
           </div>
-          <!-- Item 1: Web Design -->
+
+          <!-- Item 1: UX Design (WAKASA&CO. BOOKS 公式サイトリニューアル) -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
-            data-category="web"
+            data-category="ux"
             data-id="1"
             onclick="openModal(1)"
           >
             <div
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
-              <!-- Carousel container -->
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/books_fv.jpeg"
@@ -426,38 +426,28 @@
                 decoding="async"
                 fetchpriority="low"
               />
-              <!-- Carousel dots -->
               <div
                 class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
               ></div>
+            </div>
+            <!-- Added Content Area -->
+            <div class="pt-6 flex justify-between items-start">
+              <div>
+                <span
+                  class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1"
+                  >UX Design</span
+                >
+                <h3 class="text-base font-serif text-brand-text font-light">
+                  WAKASA&CO. BOOKS 公式サイトリニューアル
+                </h3>
+              </div>
+              <span
+                class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Explore &rarr;</span
+              >
             </div>
           </div>
 
-          <!-- Item 2: UX Design -->
-          <div
-            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
-            data-category="web"
-            data-id="1"
-            onclick="openModal(1)"
-          >
-            <div
-              class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
-            >
-              <!-- Carousel container -->
-              <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                src="images/books_fv.jpeg"
-                alt="WAKASA＆CO．BOOKトップページビジュアル"
-                loading="lazy"
-                decoding="async"
-                fetchpriority="low"
-              />
-              <!-- Carousel dots -->
-              <div
-                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
-              ></div>
-            </div>
-          </div>
           <!-- Item 3: Graphic Design -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
@@ -1276,7 +1266,6 @@
                 プロジェクトの概要説明が入ります。
               </p>
             </div>
-            <!-- (Challenge と Solution セクションは省略されました) -->
           </div>
         </div>
       </div>
@@ -1284,25 +1273,9 @@
 
     <!-- Portfolio Database for Modal Content Injection -->
     <script>
+      // Removed duplicate records for id 1, 2 and 12
       const worksDatabase = {
         1: {
-          category: "UX Design",
-          title: "WAKASA&CO. BOOKS 公式サイトリニューアル",
-          client: "株式会社わかさ生活",
-          role: "UI/UX Lead & Front-end Developer",
-          duration: "6 Months (2026)",
-          deliverables: "Responsive Web, e-book Release, Brand Page",
-          overview:
-            "複数実店舗とオンライン書店を持つ書店ブランドの公式サイトをリニューアル。電子書籍をリリースし、ブランドページなどの機能も追加。回遊性を意識して購入機会を高めるWebデザインを目指しました。サイトURL：https://books.wakasa.jp/shop/default.aspx",
-          externalUrl: "https://books.wakasa.jp/shop/default.aspx",
-          images: [
-            {
-              src: "images/books_fv.jpeg",
-              alt: "WAKASA＆CO．BOOKトップページビジュアル",
-            },
-          ],
-        },
-        2: {
           category: "UX Design",
           title: "WAKASA&CO. BOOKS 公式サイトリニューアル",
           client: "株式会社わかさ生活",
@@ -1542,23 +1515,6 @@
             {
               src: "images/poster.jpg",
               alt: "Shapes of Balance Poster",
-            },
-          ],
-        },
-        12: {
-          category: "Web Design",
-          title: "WAKASA App Store LP",
-          client: "株式会社わかさ生活",
-          role: "Web Design & Front-end",
-          duration: "1 Month (2026)",
-          deliverables: "Landing Page, Responsive HTML/CSS",
-          externalUrl: "https://shop.wakasa.jp/np/app_store/",
-          overview:
-            "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
-          images: [
-            {
-              src: "images/applpfv.jpeg",
-              alt: "WAKASA App Store LP ヒーローイメージ",
             },
           ],
         },
