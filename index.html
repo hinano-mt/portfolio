@@ -167,7 +167,7 @@
         <div class="absolute inset-0 bg-brand-bg/75"></div>
       </div>
 
-      <!-- Quiet architectural grid guide -->
+      <!-- Quiet architectural grid guide (La Cabra style) -->
       <div
         class="absolute inset-0 grid grid-cols-4 pointer-events-none opacity-[0.03]"
       >
@@ -249,7 +249,7 @@
             </h2>
           </div>
 
-          <!-- Category Filter Buttons -->
+          <!-- Category Filter Buttons (La Cabra subtle horizontal bar style) -->
           <div
             class="flex flex-wrap gap-x-8 gap-y-4 text-[10px] uppercase tracking-[0.2em] font-medium border-b border-brand-border/60 pb-2 w-full lg:w-auto"
           >
@@ -291,10 +291,11 @@
           id="portfolioGrid"
           class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
         >
-          <!-- Item 12: WAKASA App Store LP -->
+          <!-- New Item: WAKASA App Store LP (inserted at top) -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="12"
             onclick="openModal(12)"
           >
             <div
@@ -305,7 +306,12 @@
                 src="images/applpfv.jpeg"
                 alt="WAKASA App Store LP"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -324,10 +330,11 @@
             </div>
           </div>
 
-          <!-- Item 13: 福袋同封あいさつ状 -->
+          <!-- New Item: 福袋同封あいさつ状 (Graphic Design) -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="graphic"
+            data-id="13"
             onclick="openModal(13)"
           >
             <div
@@ -338,7 +345,12 @@
                 src="images/fukubukuro_front.jpg"
                 alt="福袋同封あいさつ状 表"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -357,10 +369,11 @@
             </div>
           </div>
 
-          <!-- Item 14: Poster -->
+          <!-- New Item: Poster  (Graphic Design) -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="graphic"
+            data-id="14"
             onclick="openModal(14)"
           >
             <div
@@ -371,7 +384,12 @@
                 src="images/poster.jpg"
                 alt="Poster"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -389,44 +407,62 @@
               >
             </div>
           </div>
-
-          <!-- Item 2: UX Design (WAKASA&CO. BOOKS 公式サイトリニューアル) -->
+          <!-- Item 1: Web Design -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
-            data-category="ux"
-            onclick="openModal(2)"
+            data-category="web"
+            data-id="1"
+            onclick="openModal(1)"
           >
             <div
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
+              <!-- Carousel container -->
               <img
                 class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/books_fv.jpeg"
-                alt="WAKASA&CO. BOOKS 公式サイトリニューアル"
+                alt="WAKASA＆CO．BOOKトップページビジュアル"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
-            </div>
-            <div class="pt-6 flex justify-between items-start">
-              <div>
-                <span
-                  class="text-[9px] text-brand-textMuted uppercase tracking-widest font-semibold block mb-1"
-                  >UX Design</span
-                >
-                <h3 class="text-base font-serif text-brand-text font-light">
-                  WAKASA&CO. BOOKS 公式サイトリニューアル
-                </h3>
-              </div>
-              <span
-                class="text-xs text-brand-textMuted opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                >Explore &rarr;</span
-              >
+              <!-- Carousel dots -->
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
           </div>
 
+          <!-- Item 2: UX Design -->
+          <div
+            class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
+            data-category="web"
+            data-id="1"
+            onclick="openModal(1)"
+          >
+            <div
+              class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
+            >
+              <!-- Carousel container -->
+              <img
+                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                src="images/books_fv.jpeg"
+                alt="WAKASA＆CO．BOOKトップページビジュアル"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+              <!-- Carousel dots -->
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
+            </div>
+          </div>
           <!-- Item 3: Graphic Design -->
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="graphic"
+            data-id="3"
             onclick="openModal(3)"
           >
             <div
@@ -437,7 +473,13 @@
                 src="images/shopcard-lightpp-omote.png"
                 alt="WAKASA&CO.Shop Card 表面"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <!-- Carousel dots -->
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -446,7 +488,7 @@
                   >Graphic Design</span
                 >
                 <h3 class="text-base font-serif text-brand-text font-light">
-                  WAKASA&CO. ブランドショップカード
+                  WAKASA&CO. ブランドショップカードデザイン
                 </h3>
               </div>
               <span
@@ -460,6 +502,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="marketing"
+            data-id="4"
             onclick="openModal(4)"
           >
             <div
@@ -470,7 +513,13 @@
                 src="images/LINEbanner.jpeg"
                 alt="LINEミニゲーム バナー"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <!-- Carousel dots -->
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -479,7 +528,7 @@
                   >Marketing Planning</span
                 >
                 <h3 class="text-base font-serif text-brand-text font-light">
-                  LINEミニゲーム プロモーション
+                  LINEミニゲーム「ブルブルくんとイースターエッグハント」
                 </h3>
               </div>
               <span
@@ -493,6 +542,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="10"
             onclick="openModal(10)"
           >
             <div
@@ -503,7 +553,12 @@
                 src="images/4F-Pharmacy.jpg"
                 alt="メノコト薬店 試供品プレゼント"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -526,6 +581,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="8"
             onclick="openModal(8)"
           >
             <div
@@ -536,7 +592,12 @@
                 src="images/3F-Forest.jpg"
                 alt="ブルーベリーの森 サプリメント 10%OFF"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -545,7 +606,7 @@
                   >Web Design</span
                 >
                 <h3 class="text-base font-serif text-brand-text font-light">
-                  ブルーベリーの森 サプリ10%OFF
+                  ブルーベリーの森 サプリメント 10%OFF
                 </h3>
               </div>
               <span
@@ -559,6 +620,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="9"
             onclick="openModal(9)"
           >
             <div
@@ -569,7 +631,12 @@
                 src="images/4F-Books.jpg"
                 alt="書籍2000円以上購入で200円引き クーポン"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -592,6 +659,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="6"
             onclick="openModal(6)"
           >
             <div
@@ -602,7 +670,12 @@
                 src="images/1F-STYLE.jpg"
                 alt="WAKASA&CO STYLE ポストカード"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -611,7 +684,7 @@
                   >Web Design</span
                 >
                 <h3 class="text-base font-serif text-brand-text font-light">
-                  WAKASA&CO STYLE プロモーション
+                  WAKASA&CO STYLE ポストカードプロモーション
                 </h3>
               </div>
               <span
@@ -625,6 +698,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="7"
             onclick="openModal(7)"
           >
             <div
@@ -635,7 +709,12 @@
                 src="images/2F-Lounge.jpg"
                 alt="LOUNGE WAKASA&CO クーポン"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -644,7 +723,7 @@
                   >Web Design</span
                 >
                 <h3 class="text-base font-serif text-brand-text font-light">
-                  LOUNGE 2F バナーデザイン
+                  LOUNGE 2F プロモーションバナー
                 </h3>
               </div>
               <span
@@ -658,6 +737,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="5"
             onclick="openModal(5)"
           >
             <div
@@ -668,7 +748,12 @@
                 src="images/1F-Cafe.jpg"
                 alt="BLUEBERRY CAFE 10%OFF クーポン"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -691,6 +776,7 @@
           <div
             class="portfolio-item group cursor-pointer bg-brand-bg border border-brand-border p-6 hover:border-brand-text/30 transition-all duration-500"
             data-category="web"
+            data-id="11"
             onclick="openModal(11)"
           >
             <div
@@ -701,7 +787,12 @@
                 src="images/5F-Shrine.jpg"
                 alt="メノコト神社 おみくじ1回無料"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+              <div
+                class="item-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5"
+              ></div>
             </div>
             <div class="pt-6 flex justify-between items-start">
               <div>
@@ -710,7 +801,7 @@
                   >Web Design</span
                 >
                 <h3 class="text-base font-serif text-brand-text font-light">
-                  メノコト神社 おみくじ無料キャンペーン
+                  メノコト神社 5F おみくじプロモーション
                 </h3>
               </div>
               <span
@@ -731,16 +822,18 @@
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start"
       >
+        <!-- Left Side: Profile Photo Placeholder -->
         <div class="lg:col-span-5 flex justify-center w-full">
           <div
             class="relative w-full aspect-[4/5] max-w-sm border border-brand-border bg-brand-bg p-4 flex flex-col justify-between"
           >
             <div
-              class="flex justify-between text-[9px] tracking-widest text-brand-textMuted uppercase font-medium mb-4"
+              class="flex justify-between text-[9px] tracking-widest text-brand-textMuted uppercase font-medium"
             >
               <span>Identity</span>
               <span>01 / TOKYO</span>
             </div>
+
             <div
               class="w-full h-full overflow-hidden border border-brand-border/60 mb-4 bg-brand-bgSecondary"
             >
@@ -753,23 +846,27 @@
                   this.nextElementSibling.classList.remove('hidden');
                 "
               />
+              <!-- 写真が読み込めないとき用のシンプルな文字プレースホルダー -->
               <div
                 class="hidden w-full h-full flex items-center justify-center text-xs text-brand-textMuted tracking-widest"
               >
                 PHOTO
               </div>
             </div>
+
             <div class="text-center">
               <span class="font-serif italic text-brand-text text-sm block"
-                >UX Designer & Editorial Thinker</span
+                >UX Design & E-Commerce Specialist</span
               >
               <span
                 class="text-[9px] tracking-[0.2em] uppercase text-brand-textMuted mt-1 block"
-                >Est. 2026</span
+                >Est. 2021</span
               >
             </div>
           </div>
         </div>
+
+        <!-- Right Side: Profile Info -->
         <div class="lg:col-span-7 space-y-10 lg:pt-4">
           <span
             class="text-brand-textMuted uppercase tracking-[0.3em] text-[10px] font-semibold block"
@@ -778,22 +875,47 @@
           <h2
             class="text-2xl sm:text-3xl font-serif font-light leading-[1.5] text-brand-text"
           >
-            情緒的な美しさと、数字に裏付けられたロジックでビジネスに並走します。
+            ビジネスの可能性を最大化する、<br />ハイブリッド・クリエイター
           </h2>
           <div
             class="space-y-6 text-sm text-brand-textMuted leading-[1.8] font-light tracking-wide"
           >
             <p>
-              見た目の美しさだけでなく、ユーザーの本質的な課題を解決する体験設計（UXデザイン）を軸に活動しています。ターゲット層
-              of
-              インサイトに基づいたWebデザイン・空間やペーパーアイテムを貫くアイデンティティを統合し、一貫したブランド体験を構築します。
+              見た目の美しさ（グラフィック・Webデザイン）だけでなく、ユーザーにとって最も使いやすい体験（UXデザイン）、端正で機能的なアイデンティティ（グラフィックデザイン）、そしてそれをスケールさせる仕組み（マーケティング企画）を横断的に設計します。
             </p>
+            <p>
+              特にECサイトのUXデザインと販促を強みとしており、サイト設計からデザイン適用・更新、マーケティングキャンペーンの企画と実施まで、トータルで遂行可能です。
+            </p>
+          </div>
+
+          <!-- Skill Stats -->
+          <div class="grid grid-cols-2 gap-8 pt-8 border-t border-brand-border">
+            <div>
+              <div class="text-2xl font-serif text-brand-text font-light">
+                04
+              </div>
+              <div
+                class="text-[10px] text-brand-textMuted tracking-[0.2em] uppercase mt-1"
+              >
+                Core Specialties
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-serif text-brand-text font-light">
+                50+
+              </div>
+              <div
+                class="text-[10px] text-brand-textMuted tracking-[0.2em] uppercase mt-1"
+              >
+                Projects Completed
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Expertise Section -->
+    <!-- Expertise Section (The 4 Pillars) -->
     <section
       id="expertise"
       class="py-32 px-6 md:px-12 bg-brand-bgSecondary border-t border-brand-border"
@@ -807,13 +929,16 @@
           <h2
             class="text-2xl sm:text-3xl font-serif font-light text-brand-text"
           >
-            提供可能なスキル
+            提供可能な4つの価値
           </h2>
+          <div class="w-12 h-[1px] bg-brand-textMuted/40 mt-6"></div>
         </div>
+
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
         >
-          <div class="border-t border-brand-border pt-8 space-y-4">
+          <!-- Web Design -->
+          <div class="group border-t border-brand-border pt-8 space-y-6">
             <div
               class="text-brand-textMuted text-[10px] tracking-widest font-mono"
             >
@@ -822,11 +947,15 @@
             <h3 class="text-lg font-serif text-brand-text font-light">
               Web Design
             </h3>
-            <p class="text-xs text-brand-textMuted leading-[1.8] font-light">
-              美しさとブランドの世界観を両立させ、レスポンシブで最適化されたWebサイトを制作します。
+            <p
+              class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
+            >
+              最新のトレンドとブランドイメージを調和させ、高いコンバージョンを生み出すレスポンシブなWebサイトを構築します。
             </p>
           </div>
-          <div class="border-t border-brand-border pt-8 space-y-4">
+
+          <!-- UX Design -->
+          <div class="group border-t border-brand-border pt-8 space-y-6">
             <div
               class="text-brand-textMuted text-[10px] tracking-widest font-mono"
             >
@@ -835,11 +964,15 @@
             <h3 class="text-lg font-serif text-brand-text font-light">
               UX Design
             </h3>
-            <p class="text-xs text-brand-textMuted leading-[1.8] font-light">
-              ユーザーリサーチ、情報設計に基づき、迷いのない心地よいデジタル・リアル体験を設計します。
+            <p
+              class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
+            >
+              徹底的なユーザーリサーチ、ペルソナ設計、プロトタイピングを通じて、直感的で心地の良いユーザー体験を設計します。
             </p>
           </div>
-          <div class="border-t border-brand-border pt-8 space-y-4">
+
+          <!-- Graphic Design -->
+          <div class="group border-t border-brand-border pt-8 space-y-6">
             <div
               class="text-brand-textMuted text-[10px] tracking-widest font-mono"
             >
@@ -848,21 +981,27 @@
             <h3 class="text-lg font-serif text-brand-text font-light">
               Graphic Design
             </h3>
-            <p class="text-xs text-brand-textMuted leading-[1.8] font-light">
-              ブランドカードや挨拶状など、マテリアルの質感にまでこだわったグラフィック一式。
+            <p
+              class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
+            >
+              ロゴデザイン、ポスター、名刺、パンフレットなど、一目でブランドアイデンティティが伝わる一貫性のあるグラフィック。
             </p>
           </div>
-          <div class="border-t border-brand-border pt-8 space-y-4">
+
+          <!-- Marketing Planning -->
+          <div class="group border-t border-brand-border pt-8 space-y-6">
             <div
               class="text-brand-textMuted text-[10px] tracking-widest font-mono"
             >
               04.
             </div>
             <h3 class="text-lg font-serif text-brand-text font-light">
-              Marketing Strategy
+              Marketing Planning
             </h3>
-            <p class="text-xs text-brand-textMuted leading-[1.8] font-light">
-              目的達成のためのクリエイティブ運用、LINEバナー設計、各種キャンペーン施策の全体設計。
+            <p
+              class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
+            >
+              競合分析、ターゲット選定、SNS・広告運用、ファネル設計を行い、プロダクトを確実にユーザーへ届ける戦略。
             </p>
           </div>
         </div>
@@ -872,23 +1011,30 @@
     <!-- Contact Section -->
     <section id="contact" class="py-32 px-6 md:px-12 bg-brand-bg relative">
       <div
-        class="max-w-4xl mx-auto border border-brand-border bg-brand-bgSecondary p-8 sm:p-16 text-center"
+        class="max-w-4xl mx-auto border border-brand-border bg-brand-bgSecondary p-8 sm:p-16 relative overflow-hidden"
       >
-        <span
-          class="text-brand-textMuted uppercase tracking-[0.3em] text-[10px] font-semibold mb-4 block"
-          >Collaboration</span
-        >
-        <h2
-          class="text-2xl sm:text-3xl font-serif font-light text-brand-text mb-12"
-        >
-          プロジェクトについて話しましょう
-        </h2>
+        <div class="text-center mb-16">
+          <span
+            class="text-brand-textMuted uppercase tracking-[0.3em] text-[10px] font-semibold mb-4 block"
+            >Let's Collaborate</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-serif font-light text-brand-text"
+          >
+            プロジェクトについて話しましょう
+          </h2>
+          <div class="w-8 h-[1px] bg-brand-textMuted/40 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Enhanced Form: Integrated with AJAX for FormSubmit.co -->
         <form
           id="contactForm"
           onsubmit="handleContactSubmit(event)"
-          class="space-y-8 max-w-lg mx-auto text-left"
+          class="space-y-8 max-w-lg mx-auto"
         >
+          <!-- HoneyPot (Spam protection) -->
           <input type="text" name="_honey" style="display: none" />
+
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <label
@@ -899,7 +1045,8 @@
                 required
                 type="text"
                 name="Name"
-                class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text text-xs rounded-none"
+                placeholder="山田 太郎"
+                class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text focus:outline-none transition-colors text-xs rounded-none"
               />
             </div>
             <div>
@@ -911,8 +1058,32 @@
                 required
                 type="email"
                 name="Email"
-                class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text text-xs rounded-none"
+                placeholder="example@email.com"
+                class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text focus:outline-none transition-colors text-xs rounded-none"
               />
+            </div>
+          </div>
+          <div>
+            <label
+              class="block text-[10px] uppercase tracking-[0.2em] text-brand-textMuted font-medium mb-3"
+              >ご相談の種類</label
+            >
+            <div class="relative">
+              <select
+                name="Service"
+                class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text focus:outline-none transition-colors text-xs appearance-none rounded-none"
+              >
+                <option value="all">すべて一括で依頼したい</option>
+                <option value="web">Webデザイン</option>
+                <option value="ux">UX改善・リサーチ</option>
+                <option value="graphic">ロゴ・ビジュアルデザイン</option>
+                <option value="marketing">プロモーション・プランニング</option>
+              </select>
+              <div
+                class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none text-brand-textMuted"
+              >
+                <i data-lucide="chevron-down" class="w-3 h-3"></i>
+              </div>
             </div>
           </div>
           <div>
@@ -924,20 +1095,26 @@
               required
               name="Message"
               rows="4"
-              class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text text-xs resize-none rounded-none"
+              placeholder="プロジェクトの概要、目的、ご予算などをご自由に入力してください。"
+              class="w-full bg-brand-bg border-b border-brand-border py-3 text-brand-text focus:outline-none transition-colors text-xs resize-none rounded-none"
             ></textarea>
           </div>
+
           <button
             type="submit"
-            class="w-full py-4 bg-brand-text text-brand-bg text-xs tracking-[0.25em] uppercase hover:bg-brand-accent hover:text-white transition-all duration-300 rounded-none"
+            class="w-full py-4 bg-brand-text text-brand-bg text-xs tracking-[0.25em] uppercase hover:bg-brand-accent hover:text-white transition-all duration-300 rounded-none disabled:opacity-50"
           >
             Send Message
           </button>
         </form>
+
+        <!-- Interactive Inline Alert System -->
         <div
           id="successToast"
-          class="hidden mt-8 border border-brand-accent/50 bg-brand-bg p-6 text-center max-w-lg mx-auto"
-        ></div>
+          class="hidden mt-8 border border-brand-border bg-brand-bg p-6 text-center max-w-lg mx-auto"
+        >
+          <!-- Replaced dynamically in Javascript -->
+        </div>
       </div>
     </section>
 
@@ -949,29 +1126,42 @@
         class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-8"
       >
         <span class="font-serif text-brand-text tracking-[0.2em] font-medium"
-          >HINANO MATOBA ARCHIVE.</span
+          >CREATIVE ARCHIVE.</span
         >
-        <span>&copy; 2026 Hinano Matoba. All Rights Reserved.</span>
+        <span>&copy; 2026 Creative Archive. All Rights Reserved.</span>
+        <div class="flex space-x-8">
+          <a href="#" class="hover:text-brand-accent transition-colors"
+            >GitHub</a
+          >
+          <a href="#" class="hover:text-brand-accent transition-colors"
+            >Instagram</a
+          >
+          <a href="#" class="hover:text-brand-accent transition-colors"
+            >LinkedIn</a
+          >
+        </div>
       </div>
     </footer>
 
     <!-- Portfolio Detail Modal -->
     <div
       id="detailModal"
-      class="hidden fixed inset-0 z-50 overflow-y-auto bg-brand-bg/90 backdrop-blur-sm flex items-center justify-center p-4"
+      class="hidden fixed inset-0 z-50 overflow-y-auto bg-brand-bg/90 backdrop-blur-sm flex items-start sm:items-center justify-center p-4 pt-8 sm:pt-0"
     >
       <div
-        class="bg-brand-bg border border-brand-border max-w-3xl w-full rounded-none overflow-hidden relative shadow-sm transition-all duration-300 scale-95 opacity-0"
+        class="bg-brand-bg border border-brand-border max-w-3xl w-full rounded-none max-h-[90vh] overflow-y-auto relative shadow-sm transition-all duration-300 scale-95 opacity-0 pt-1 sm:pt-4"
         id="modalContainer"
       >
+        <!-- Close Button -->
         <button
           onclick="closeModal()"
           class="absolute top-6 right-6 text-brand-textMuted hover:text-brand-text transition-colors z-10"
         >
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
-        <div class="p-8 sm:p-12 space-y-10">
-          <div>
+
+        <div class="p-8 sm:p-12 space-y-6">
+          <div class="max-w-xl mx-auto">
             <span
               id="modalCategory"
               class="text-[9px] text-brand-accent uppercase tracking-[0.25em] font-semibold block mb-3"
@@ -979,15 +1169,53 @@
             >
             <h2
               id="modalTitle"
-              class="text-2xl font-serif text-brand-text font-light"
+              class="text-2xl font-serif text-brand-text font-light whitespace-normal break-words pr-14 relative z-20"
             >
               Project Title
             </h2>
           </div>
-          <div
-            id="modalImageContainer"
-            class="w-full flex flex-col gap-6"
-          ></div>
+
+          <!-- Image Carousel -->
+          <div class="space-y-4">
+            <div
+              class="relative overflow-hidden rounded-none border border-brand-border bg-[#FAF8F5] aspect-square max-w-xl mx-auto"
+            >
+              <img
+                id="modalImage"
+                src=""
+                alt="Project image"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+              <button
+                id="modalPrev"
+                type="button"
+                class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 border border-brand-border px-3 py-2 text-brand-text shadow-sm hover:bg-brand-bg transition-colors"
+                aria-label="前の画像"
+              >
+                ‹
+              </button>
+              <button
+                id="modalNext"
+                type="button"
+                class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 border border-brand-border px-3 py-2 text-brand-text shadow-sm hover:bg-brand-bg transition-colors"
+                aria-label="次の画像"
+              >
+                ›
+              </button>
+              <div
+                id="modalImageCounter"
+                class="absolute left-1/2 bottom-4 -translate-x-1/2 rounded-full bg-brand-bg/90 px-3 py-1 text-[10px] tracking-[0.2em] text-brand-textMuted"
+              >
+                1 / 1
+              </div>
+            </div>
+            <div id="modalDots" class="flex justify-center gap-2"></div>
+          </div>
+
+          <!-- Specs Grid -->
           <div
             class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-8 border-y border-brand-border text-xs"
           >
@@ -998,7 +1226,7 @@
                 Client
               </div>
               <div id="modalClient" class="font-light text-brand-text">
-                Client
+                Client Name
               </div>
             </div>
             <div>
@@ -1007,7 +1235,9 @@
               >
                 Role
               </div>
-              <div id="modalRole" class="font-light text-brand-text">Role</div>
+              <div id="modalRole" class="font-light text-brand-text">
+                Lead Designer
+              </div>
             </div>
             <div>
               <div
@@ -1016,7 +1246,7 @@
                 Duration
               </div>
               <div id="modalDuration" class="font-light text-brand-text">
-                Duration
+                3 Months
               </div>
             </div>
             <div>
@@ -1026,250 +1256,505 @@
                 Deliverable
               </div>
               <div id="modalDeliverables" class="font-light text-brand-text">
-                Deliverable
+                Web / Brand
               </div>
             </div>
           </div>
+
+          <!-- Structured Case Study Content -->
           <div class="space-y-8">
             <div>
               <h4
                 class="text-[10px] uppercase tracking-[0.2em] text-brand-text font-medium mb-3"
               >
-                01. 概要 (Overview)
+                概要 (Overview)
               </h4>
               <p
                 id="modalOverview"
                 class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
-              ></p>
-            </div>
-            <div>
-              <h4
-                class="text-[10px] uppercase tracking-[0.2em] text-brand-text font-medium mb-3"
               >
-                02. 課題 (Challenge)
-              </h4>
-              <p
-                id="modalChallenge"
-                class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
-              ></p>
+                プロジェクトの概要説明が入ります。
+              </p>
             </div>
-            <div>
-              <h4
-                class="text-[10px] uppercase tracking-[0.2em] text-brand-text font-medium mb-3"
-              >
-                03. 解決策 & 成果 (Solution & Impact)
-              </h4>
-              <p
-                id="modalSolution"
-                class="text-xs text-brand-textMuted leading-[1.8] font-light tracking-wide"
-              ></p>
-            </div>
+            <!-- (Challenge と Solution セクションは省略されました) -->
           </div>
         </div>
       </div>
     </div>
 
-    <!-- JavaScript Portfolio Database and Logics -->
+    <!-- Portfolio Database for Modal Content Injection -->
     <script>
       const worksDatabase = {
-        // ✨ WAKASA&CO. BOOKS 公式サイトリニューアル (UX Design) ✨
+        1: {
+          category: "UX Design",
+          title: "WAKASA&CO. BOOKS 公式サイトリニューアル",
+          client: "株式会社わかさ生活",
+          role: "UI/UX Lead & Front-end Developer",
+          duration: "6 Months (2026)",
+          deliverables: "Responsive Web, e-book Release, Brand Page",
+          overview:
+            "複数実店舗とオンライン書店を持つ書店ブランドの公式サイトをリニューアル。電子書籍をリリースし、ブランドページなどの機能も追加。回遊性を意識して購入機会を高めるWebデザインを目指しました。サイトURL：https://books.wakasa.jp/shop/default.aspx",
+          externalUrl: "https://books.wakasa.jp/shop/default.aspx",
+          images: [
+            {
+              src: "images/books_fv.jpeg",
+              alt: "WAKASA＆CO．BOOKトップページビジュアル",
+            },
+          ],
+        },
         2: {
           category: "UX Design",
           title: "WAKASA&CO. BOOKS 公式サイトリニューアル",
-          client: "WAKASA&CO. BOOKS",
-          role: "UX Designer / Information Architect",
-          duration: "2 Months (2026)",
-          deliverables:
-            "User Research, Wireframes, UX Strategy, Figma Prototypes",
+          client: "株式会社わかさ生活",
+          role: "UI/UX Lead & Front-end Developer",
+          duration: "6 Months (2026)",
+          deliverables: "Responsive Web, e-book Release, Brand Page",
           overview:
-            "オンライン書店およびブランドプラットフォームである「WAKASA&CO. BOOKS」の全面的なUXリニューアル。",
-          challenge:
-            "書籍の検索性が悪く、ブランドが発信するエッセイやコラムなどのストーリーコンテンツへの回遊率が非常に低いという構造的な課題がありました。",
-          solution:
-            "ユーザー行動分析に基づき、本を探す「機能的検索」と、偶然の本に出会う「情緒的探索」を融合させたUX構造を再設計。回遊率および購入単価の向上を達成しました。",
-          images: ["images/books_fv.jpeg"],
+            "複数実店舗とオンライン書店を持つ書店ブランドの公式サイトをリニューアル。電子書籍をリリースし、ブランドページなどの機能も追加。回遊性を意識して購入機会を高めるWebデザインを目指しました。サイトURL：https://books.wakasa.jp/shop/default.aspx",
+          externalUrl: "https://books.wakasa.jp/shop/default.aspx",
+          images: [
+            {
+              src: "images/books_fv.jpeg",
+              alt: "WAKASA＆CO．BOOKトップページビジュアル",
+            },
+          ],
         },
         3: {
           category: "Graphic Design",
-          title: "WAKASA&CO. ブランドショップカード",
-          client: "WAKASA&CO.",
-          role: "Graphic Designer",
-          duration: "2026",
-          deliverables: "Shop Card Design",
+          title: "WAKASA&CO. ブランドショップカードデザイン",
+          client: "株式会社わかさ生活",
+          role: "Art Director & Graphic Designer",
+          duration: "2 Months (2026)",
+          deliverables: "Design,Layout,Shop Info,QR Code",
           overview:
-            "オフライン店舗やブランドギフトに同封する、質感の高いプレミアムなショップカードのデザイン。",
-          challenge:
-            "単なる連絡先の記載に留まらず、手に取ったユーザーが机に飾りたくなるような、ブランドのアートピースとしての品質が求められました。",
-          solution:
-            "紙本来の手触りを活かした厚手のマテリアルに、ニュアンスのある配色とタイポグラフィを施し、洗練されたクラフト感を演出しました。",
-          images: ["images/shopcard-lightpp-omote.png"],
+            "カフェ、バー、サプリメントショップ、キャラクターショップなど複数の店舗を持つWAKASA&CO.のブランドショップカードを、和紙の質感を活かした高級感のあるデザインで作成。店頭でのブランド認知向上と、QRコードを通じたブランドサイト誘導を目的としました。",
+
+          images: [
+            {
+              src: "images/shopcard-lightpp-omote.png",
+              alt: "WAKASA&CO.Shop Card 表面",
+            },
+            {
+              src: "images/shopcard-lightpp-ura.png",
+              alt: "WAKASA&CO.Shop Card 裏面",
+            },
+          ],
         },
         4: {
           category: "Marketing Planning",
           title: "LINEミニゲーム「ブルブルくんとイースターエッグハント」",
-          client: "Brand Campaign",
-          role: "Marketing Planner / Creative Director",
-          duration: "2026",
-          deliverables: "Campaign Banner, Event Flow",
+          client: "株式会社わかさ生活",
+          role: "Web Maeketing UX Designer",
+          duration: "5 Months (2025)",
+          deliverables: "Content Plan, User Flow, Wireframes, Design Direction",
           overview:
-            "LINE公式アカウント内で体験可能なミニゲームキャンペーンのバナーデザインおよびプロモーション全体の動線設計。",
-          challenge:
-            "既存ユーザーのエンゲージメント向上と、期間限定イベント中の新規友だち追加数を爆発的に増加させるためのフックが必要でした。",
-          solution:
-            "パステルカラーのカラフルなアクセントと可愛らしいキャラクターの世界観を調和させたバナーを設計し、タップ率（CTR）の大幅な改善と新規登録に貢献しました。",
-          images: ["images/LINEbanner.jpeg"],
+            "LINEミニゲームを活用した、春のキャンペーン施策。ユーザーが楽しみながらブランド認知を高め、キャンペーンサイトへの誘導を促すUXデザインを設計しました。",
+          images: [
+            {
+              src: "images/LINEbanner.jpeg",
+              alt: "LINEミニゲーム バナー",
+            },
+            {
+              src: "images/field01.jpeg",
+              alt: "LINEミニゲーム フィールドビジュアル 1",
+            },
+            {
+              src: "images/field02.jpeg",
+              alt: "LINEミニゲーム フィールドビジュアル 2",
+            },
+            {
+              src: "images/ClearModal.jpeg",
+              alt: "LINEミニゲーム クリアモーダル",
+            },
+            {
+              src: "images/campain01.jpeg",
+              alt: "LINEミニゲーム キャンペーンページ１",
+            },
+            {
+              src: "images/campain02.jpeg",
+              alt: "LINEミニゲーム キャンペーンページ2",
+            },
+            {
+              src: "images/wallpaper.jpeg",
+              alt: "LINEミニゲーム 特典壁紙",
+            },
+          ],
         },
         5: {
           category: "Web Design",
-          title: "BLUEBERRY CAFE イベントクーポン",
+          title: "BLUEBERRY CAFE 10%OFF イベントクーポン",
           client: "BLUEBERRY CAFE",
-          role: "Web Designer",
-          duration: "2026",
-          deliverables: "Digital Coupon UI",
+          role: "Visual & Web Designer",
+          duration: "1 Month (2026)",
+          deliverables: "Campaign Artwork, Landing Banner",
           overview:
-            "カフェイベントで使用する10%OFFデジタルクーポンのUX/UIデザイン。",
-          challenge:
-            "店頭での会計時に、スマートフォン画面を提示する際の視認性と操作の迷い（ユーザーのストレス）を排除する必要がありました。",
-          solution:
-            "ミニマルでありながら利用期限や利用ボタンが一目でわかるアクセシビリティを追求し、スムーズな現場オペレーションを実現しました。",
-          images: ["images/1F-Cafe.jpg"],
+            "イベント参加者向けの10%OFFクーポンビジュアルをWeb用に制作。ブランドカラーと食欲をそそるビジュアルを両立させ、SNS拡散を狙えるデザインに仕上げました。",
+          images: [
+            {
+              src: "images/blueberry-cafe-10off.png",
+              alt: "BLUEBERRY CAFE 10%OFF クーポン",
+            },
+          ],
         },
         6: {
           category: "Web Design",
           title: "WAKASA&CO STYLE ポストカードプロモーション",
-          client: "WAKASA&CO STYLE",
-          role: "Digital Designer",
-          duration: "2026",
-          deliverables: "Campaign Page & UI",
+          client: "WAKASA&CO.",
+          role: "Art Direction & Visual Design",
+          duration: "1 Month (2026)",
+          deliverables: "Campaign Visual, Social Banner",
           overview:
-            "リアルとデジタルを繋ぐポストカードプロモーションのデジタルランディングページ、バナー設計。",
-          challenge:
-            "実物のポストカードを受け取った顧客を、シームレスにデジタル特設サイトへと誘い、ブランドのファンになってもらうためのUXが必要でした。",
-          solution:
-            "紙媒体の持つ凛とした空気感をそのままコード上で引き継ぎ、美しい余白を用いたビジュアルストーリーテリングを構築しました。",
-          images: ["images/1F-STYLE.jpg"],
+            "ブランドの北欧イメージを表現したポストカードプレゼント企画用ビジュアル。店頭POPやWeb広告にも使える統一感あるデザインを制作しました。",
+          images: [
+            {
+              src: "images/wakasa-style-postcard.png",
+              alt: "WAKASA&CO STYLE ポストカード",
+            },
+          ],
         },
         7: {
           category: "Web Design",
           title: "LOUNGE 2F プロモーションバナー",
-          client: "LOUNGE WAKASA&CO",
-          role: "UI/Visual Designer",
-          duration: "2026",
-          deliverables: "Banner System",
+          client: "LOUNGE WAKASA&CO.",
+          role: "Creative Direction",
+          duration: "1 Month (2026)",
+          deliverables: "Landing Banner, Social Ad",
           overview:
-            "LOUNGE 2Fで利用できるスマートなアプリクーポンプロモーション用グラフィック。",
-          challenge:
-            "ラウンジの上質な大人の空間イメージを損なわずに、キャンペーンの「お得感」をいやらしくなく伝える絶妙なクリエイティブトーンが課題でした。",
-          solution:
-            "彩度を抑えた美しいストーンカラーのトーン＆マナーを踏襲し、高級ホテルを彷彿とさせる洗練された佇まいを維持しました。",
-          images: ["images/2F-Lounge.jpg"],
+            "LOUNGEのムードを伝えるクーポンビジュアルを制作。夜の雰囲気を活かしたグラデーションと、上質さを感じるタイポグラフィでブランド価値を強化しました。",
+          images: [
+            {
+              src: "images/lounge-10off.png",
+              alt: "LOUNGE 2F クーポンビジュアル",
+            },
+          ],
         },
         8: {
           category: "Web Design",
           title: "ブルーベリーの森 サプリメント 10%OFF",
-          client: "Health Brand",
-          role: "E-Commerce Designer",
-          duration: "2026",
-          deliverables: "E-Commerce Banner UI",
+          client: "WAKASA&CO.",
+          role: "UI/UX & Visual Design",
+          duration: "1 Month (2026)",
+          deliverables: "Product Campaign Banner",
           overview:
-            "ECプラットフォーム内で展開された、サプリメント購入促進バナーデザイン。",
-          challenge:
-            "健康食品特有の過度な訴求を避け、北欧モダンのような信頼感とクリーンなライフスタイル感を演出することが目標でした。",
-          solution:
-            "すっきりとした構成の中に、自然のモチーフを感じさせるミニマルな配色を施し、高い購入コンバージョンを両立しました。",
-          images: ["images/3F-Forest.jpg"],
+            "サプリメントの販促用ビジュアルを、健康と美しさを感じさせるカラーパレットで制作。オンライン広告やSNS配信用にも最適なデザインです。",
+          images: [
+            {
+              src: "images/blueberry-supplement-10off.png",
+              alt: "ブルーベリーの森 サプリメント 10%OFF",
+            },
+          ],
         },
         9: {
           category: "Web Design",
           title: "角谷文庫 4F アプリクーポン",
-          client: "角谷文庫",
-          role: "UI Designer",
-          duration: "2026",
-          deliverables: "In-App Coupon Design",
+          client: "角谷建耀知文庫",
+          role: "Digital Campaign Designer",
+          duration: "1 Month (2026)",
+          deliverables: "App Coupon Visual, Landing Page",
           overview:
-            "書籍2000円以上購入で200円引きになる、店舗連動型アプリクーポンのUIデザイン。",
-          challenge:
-            "スマートフォンの小さな画面内でも、割引条件とバーコードの提示が瞬時に認識できる機能性が最優先されました。",
-          solution:
-            "余計な装飾をすべて削ぎ落とし、コントラストの効いたタイポグラフィで最も重要な情報を強調するミニマルデザインを適用しました。",
-          images: ["images/4F-Books.jpg"],
+            "書籍購入特典のアプリクーポンビジュアルを制作。読みやすく落ち着いた配色で、店頭にもWebにも馴染むデザインを目指しました。",
+          images: [
+            {
+              src: "images/bookstore-coupon.png",
+              alt: "書籍2000円以上購入で200円引き クーポン",
+            },
+          ],
         },
         10: {
           category: "Web Design",
           title: "メノコト薬店 試供品プレゼント",
           client: "メノコト薬店",
-          role: "Digital Designer",
-          duration: "2026",
-          deliverables: "Promotion UI",
+          role: "Campaign Visual Designer",
+          duration: "1 Month (2026)",
+          deliverables: "Promo Banner, Web Visual",
           overview:
-            "薬店プロモーション用の試供品プレゼントサンプリング告知クリエイティブ。",
-          challenge:
-            "「薬店」という硬いイメージを和らげ、若年層や新しいターゲット層が気軽に申し込めるような親しみやすさを生み出す必要がありました。",
-          solution:
-            "温かみのあるベージュと繊細なラインアートを融合させ、生活に溶け込む優しくオーガニックなトーンを確立しました。",
-          images: ["images/4F-Pharmacy.jpg"],
+            "試供品提供キャンペーンのWebプロモーション用ビジュアルを制作。安心感のある薬局ブランドを表現しつつ、ユーザーの手に取りやすい情報デザインにしています。",
+          images: [
+            {
+              src: "images/menokoto-pharmacy-sample.png",
+              alt: "メノコト薬店 試供品プレゼント",
+            },
+          ],
         },
         11: {
           category: "Web Design",
-          title: "メノコト神社 おみくじ1回無料キャンペーン",
-          client: "Digital Event",
-          role: "Creative / Web Designer",
-          duration: "2026",
-          deliverables: "Campaign Interface",
+          title: "メノコト神社 5F おみくじプロモーション",
+          client: "メノコト神社",
+          role: "Visual & Web Designer",
+          duration: "1 Month (2026)",
+          deliverables: "Campaign Artwork, Social Copy",
           overview:
-            "Web上で体験できるインタラクティブなおみくじキャンペーンのインターフェース・バナー設計。",
-          challenge:
-            "「神社」「おみくじ」という和風のモチーフを、サイト全体の北欧・モダンミニマルのトンマナと調和させるアプローチが難所でした。",
-          solution:
-            "伝統的な和のニュアンスをモダンな幾何学デザインへ抽象化。洗練されたプレイフルなビジュアル体験としてリビルドしました。",
-          images: ["images/5F-Shrine.jpg"],
+            "5Fの特別イベントを告知するおみくじプロモーションビジュアル。カジュアルな和テイストと遊び心を取り入れ、集客効果を高めました。",
+          images: [
+            {
+              src: "images/menokoto-shrine-omikuji.png",
+              alt: "メノコト神社 おみくじ1回無料",
+            },
+          ],
         },
         12: {
           category: "Web Design",
           title: "WAKASA App Store LP",
-          client: "WAKASA Tech",
-          role: "UI / Front-end Designer",
-          duration: "2026",
-          deliverables: "App Store Landing Page",
+          client: "株式会社わかさ生活",
+          role: "Web Design & Front-end",
+          duration: "1 Month (2026)",
+          deliverables: "Landing Page, Responsive HTML/CSS",
+          externalUrl: "https://shop.wakasa.jp/np/app_store/",
           overview:
-            "WAKASA公式アプリの魅力を伝えるApp Store導線用ランディングページデザイン。",
-          challenge:
-            "アプリのダウンロード数を最大化するため、スクロールの手を止めさせるファーストビューのフックとロジカルな機能説明が必須でした。",
-          solution:
-            "デバイスモックアップを美しく配置したレイアウトと、機能のベネフィットを端的に伝える文字設計で、洗練されたスマートな読後感を与えます。",
-          images: ["images/applpfv.jpeg"],
+            "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
+          images: [
+            {
+              src: "images/applpfv.jpeg",
+              alt: "WAKASA App Store LP ヒーローイメージ",
+            },
+          ],
         },
         13: {
           category: "Graphic Design",
           title: "福袋同封あいさつ状",
-          client: "WAKASA&CO.",
-          role: "Graphic Designer",
-          duration: "2026",
-          deliverables: "Greeting Card Print",
+          client: "株式会社わかさ生活",
+          role: "Art Direction & Graphic Designer",
+          duration: "1 Month (2026)",
+          deliverables: "Greeting Card Design, Print",
           overview:
-            "新春福袋にパッケージングされて同封されるブランドからのメッセージカード（あいさつ状）。",
-          challenge:
-            "お正月の祝祭感（おめでたさ）を、ブランドの洗練されたミニマリズムを保ったまま表現すること。",
-          solution:
-            "過度な装飾や赤・金をあえて使わず、深い墨色の文字配置と豊かな余白、そして美しい紙のエンボス感を活かしたタイムレスなグラフィックに仕立てました。",
-          images: ["images/fukubukuro_front.jpg"],
+            "福袋に同封する挨拶状のデザイン。和のモチーフとキャラクターを活かした親しみやすいビジュアルで、ブランド体験を高めます。",
+          images: [
+            {
+              src: "images/fukubukuro_omote.jpg",
+              alt: "福袋同封あいさつ状 表面",
+            },
+            {
+              src: "images/fukubukuro_ura.jpg",
+              alt: "福袋同封あいさつ状 裏面",
+            },
+          ],
         },
         14: {
           category: "Graphic Design",
-          title: "ブランドプロモーションポスター",
-          client: "Exhibition",
-          role: "Graphic Designer / Typographer",
-          duration: "2026",
-          deliverables: "Large Format Poster",
+          title: "ポスター",
+          client: "Personal",
+          role: "Poster Design",
+          duration: "Personal Project",
+          deliverables: "Poster Artwork, B2 Print",
           overview:
-            "展示会および店舗壁面を飾る大判のブランドステートメントポスターデザイン。",
-          challenge:
-            "遠くから見ても空間のアクセントになり、近づいた時には繊細なタイポグラフィの美しさに引き込まれる二面性を持たせること。",
-          solution:
-            "大胆に配置したフォントのジャンプ率と、極限まで細部を調整したカーニング（文字間隔）により、静寂でありながら圧倒的な存在感を放つグラフィックにしました。",
-          images: ["images/poster.jpg"],
+            "バランスと色彩を探求する、抽象的な幾何学ポスター。シンプルな図形と調和のとれた配色に焦点を当てた、個人の制作プロジェクト。",
+          images: [
+            {
+              src: "images/poster.jpg",
+              alt: "Shapes of Balance Poster",
+            },
+          ],
+        },
+        12: {
+          category: "Web Design",
+          title: "WAKASA App Store LP",
+          client: "株式会社わかさ生活",
+          role: "Web Design & Front-end",
+          duration: "1 Month (2026)",
+          deliverables: "Landing Page, Responsive HTML/CSS",
+          externalUrl: "https://shop.wakasa.jp/np/app_store/",
+          overview:
+            "WAKASA のアプリ配布ページ（App Store向けランディングページ）を制作。ダウンロード導線を明確にしたレスポンシブデザインで、ブランドと連動したビジュアルを実装しました。",
+          images: [
+            {
+              src: "images/applpfv.jpeg",
+              alt: "WAKASA App Store LP ヒーローイメージ",
+            },
+          ],
         },
       };
+
+      // Portfolio item carousel state management
+      const itemCarousels = {};
+
+      function renderItemDots(itemId) {
+        const images = worksDatabase[itemId]?.images || [];
+        const item = document.querySelector(
+          `.portfolio-item[data-id="${itemId}"]`,
+        );
+        const dotsContainer = item?.querySelector(".item-dots");
+
+        if (!dotsContainer || images.length <= 1) return;
+
+        dotsContainer.innerHTML = images
+          .map(
+            (_, idx) =>
+              `<button type="button" class="item-dot w-2 h-2 rounded-full transition-colors ${
+                idx === 0 ? "bg-brand-text" : "bg-brand-border"
+              }" data-slide="${idx}" onclick="event.stopPropagation()"></button>`,
+          )
+          .join("");
+      }
+
+      function updateItemDots(itemId, slideIndex) {
+        const item = document.querySelector(
+          `.portfolio-item[data-id="${itemId}"]`,
+        );
+        const dots = item?.querySelectorAll(".item-dot");
+
+        if (!dots) return;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("bg-brand-text", idx === slideIndex);
+          dot.classList.toggle("bg-brand-border", idx !== slideIndex);
+        });
+      }
+
+      function startItemCarousel(itemId) {
+        if (itemCarousels[itemId]) return;
+        const images = worksDatabase[itemId]?.images || [];
+        if (images.length <= 1) return;
+
+        renderItemDots(itemId);
+        let currentSlide = 0;
+        const item = document.querySelector(
+          `.portfolio-item[data-id="${itemId}"]`,
+        );
+        const img = item?.querySelector(".item-image");
+
+        if (!img) return;
+
+        const timer = setInterval(() => {
+          currentSlide = (currentSlide + 1) % images.length;
+          img.style.opacity = "0";
+          setTimeout(() => {
+            img.src = images[currentSlide].src;
+            img.alt = images[currentSlide].alt;
+            img.style.opacity = "1";
+            updateItemDots(itemId, currentSlide);
+          }, 150);
+        }, 4000);
+
+        itemCarousels[itemId] = timer;
+      }
+
+      function stopItemCarousel(itemId) {
+        if (itemCarousels[itemId]) {
+          clearInterval(itemCarousels[itemId]);
+          delete itemCarousels[itemId];
+        }
+      }
+
+      // Initialize portfolio item carousels on page load
+      function initPortfolioCarousels() {
+        setTimeout(() => {
+          const items = document.querySelectorAll(".portfolio-item[data-id]");
+          const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.4,
+          };
+
+          const observeItem = (item) => {
+            const img = item.querySelector(".item-image");
+            if (!img) return;
+            img.style.transition = "opacity 0.3s ease-in-out";
+            img.style.opacity = "1";
+          };
+
+          if (window.IntersectionObserver) {
+            const portfolioObserver = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                const item = entry.target;
+                const itemId = parseInt(item.getAttribute("data-id"), 10);
+                if (!itemId) return;
+
+                observeItem(item);
+                if (entry.isIntersecting) {
+                  startItemCarousel(itemId);
+                } else {
+                  stopItemCarousel(itemId);
+                }
+              });
+            }, observerOptions);
+
+            items.forEach((item) => portfolioObserver.observe(item));
+          } else {
+            items.forEach((item) => {
+              const itemId = parseInt(item.getAttribute("data-id"), 10);
+              const img = item.querySelector(".item-image");
+              if (img) {
+                img.style.transition = "opacity 0.3s ease-in-out";
+                img.style.opacity = "1";
+              }
+              if (itemId) {
+                startItemCarousel(itemId);
+              }
+            });
+          }
+        }, 100);
+      }
+
+      // Modal image carousel state
+      let modalImages = [];
+      let modalCurrentSlide = 0;
+      let autoplayTimer = null;
+      const AUTOPLAY_INTERVAL = 4000; // 4秒
+
+      function startAutoplay() {
+        if (modalImages.length <= 1) return;
+        autoplayTimer = setInterval(() => {
+          showModalSlide(modalCurrentSlide + 1);
+        }, AUTOPLAY_INTERVAL);
+      }
+
+      function stopAutoplay() {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+      }
+
+      function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+      }
+
+      function showModalSlide(index) {
+        if (!modalImages.length) return;
+        modalCurrentSlide = (index + modalImages.length) % modalImages.length;
+
+        const imageData = modalImages[modalCurrentSlide];
+        const imageEl = document.getElementById("modalImage");
+        const counterEl = document.getElementById("modalImageCounter");
+        const dots = document.querySelectorAll("#modalDots button");
+
+        imageEl.src = imageData.src;
+        imageEl.alt = imageData.alt || `Project image ${modalCurrentSlide + 1}`;
+        counterEl.textContent = `${modalCurrentSlide + 1} / ${modalImages.length}`;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("bg-brand-text", idx === modalCurrentSlide);
+          dot.classList.toggle("bg-brand-border", idx !== modalCurrentSlide);
+        });
+
+        resetAutoplay();
+      }
+
+      function renderModalImages(images = []) {
+        const dotsWrapper = document.getElementById("modalDots");
+        modalImages = images.length
+          ? images
+          : [
+              {
+                src: "https://via.placeholder.com/1200x800?text=Image+Unavailable",
+                alt: "画像がありません",
+              },
+            ];
+        modalCurrentSlide = 0;
+
+        dotsWrapper.innerHTML = modalImages
+          .map(
+            (_, idx) =>
+              `<button type="button" class="w-2.5 h-2.5 rounded-full transition-colors ${
+                idx === 0 ? "bg-brand-text" : "bg-brand-border"
+              }" aria-label="Slide ${idx + 1}" onclick="showModalSlide(${idx})"></button>`,
+          )
+          .join("");
+
+        showModalSlide(0);
+        startAutoplay();
+      }
 
       // Mobile Menu Toggle
       const menuBtn = document.getElementById("menuBtn");
@@ -1288,7 +1773,16 @@
         });
       });
 
-      // Portfolio Filter Logic
+      document.getElementById("modalPrev").addEventListener("click", () => {
+        showModalSlide(modalCurrentSlide - 1);
+        resetAutoplay();
+      });
+      document.getElementById("modalNext").addEventListener("click", () => {
+        showModalSlide(modalCurrentSlide + 1);
+        resetAutoplay();
+      });
+
+      // Portfolio Filter Logic (La Cabra style text borders)
       function filterPortfolio(category) {
         const buttons = document.querySelectorAll(".filter-btn");
         buttons.forEach((btn) => {
@@ -1323,7 +1817,7 @@
         });
       }
 
-      // Modal Open / Close Logic with Dynamic Loop for Multiple Images
+      // Modal Open / Close Logic
       function openModal(id) {
         const data = worksDatabase[id];
         if (!data) return;
@@ -1336,33 +1830,23 @@
         document.getElementById("modalDeliverables").textContent =
           data.deliverables;
         document.getElementById("modalOverview").textContent = data.overview;
-        document.getElementById("modalChallenge").textContent = data.challenge;
-        document.getElementById("modalSolution").textContent = data.solution;
-
-        const imageContainer = document.getElementById("modalImageContainer");
-        imageContainer.innerHTML = "";
-
-        if (data.images && data.images.length > 0) {
-          data.images.forEach((imgSrc) => {
-            const img = document.createElement("img");
-            img.src = imgSrc;
-            img.alt = data.title;
-            img.className =
-              "w-full h-auto object-cover border border-brand-border/60 transition-opacity duration-300";
-            img.onerror = function () {
-              this.style.display = "none";
-            };
-            imageContainer.appendChild(img);
-          });
-          imageContainer.classList.remove("hidden");
-        } else {
-          imageContainer.classList.add("hidden");
-        }
+        renderModalImages(data.images);
 
         const modal = document.getElementById("detailModal");
         const container = document.getElementById("modalContainer");
-
         modal.classList.remove("hidden");
+        // After rendering, ensure modal content is scrolled to top so title is visible
+        setTimeout(() => {
+          try {
+            modal.scrollTop = 0;
+            container.scrollTop = 0;
+            container.scrollIntoView({ block: "center", inline: "nearest" });
+            const title = document.getElementById("modalTitle");
+            if (title) title.scrollIntoView({ block: "center" });
+          } catch (e) {
+            // ignore if scrolling not supported
+          }
+        }, 80);
         setTimeout(() => {
           container.classList.remove("scale-95", "opacity-0");
           container.classList.add("scale-100", "opacity-100");
@@ -1375,6 +1859,7 @@
         const modal = document.getElementById("detailModal");
         const container = document.getElementById("modalContainer");
 
+        stopAutoplay();
         container.classList.remove("scale-100", "opacity-100");
         container.classList.add("scale-95", "opacity-0");
 
@@ -1391,65 +1876,78 @@
         }
       });
 
-      // Contact Form AJAX Submit (FormSubmit.co)
+      // Contact Form Handle with Fetch API and FormSubmit
       async function handleContactSubmit(event) {
         event.preventDefault();
         const form = document.getElementById("contactForm");
         const successToast = document.getElementById("successToast");
         const submitBtn = form.querySelector('button[type="submit"]');
 
+        // Visual feedback: disable button and show loading state
         const originalBtnText = submitBtn.textContent;
         submitBtn.textContent = "Sending...";
         submitBtn.disabled = true;
 
+        // Prepare dynamic FormData
         const formData = new FormData(form);
-        formData.append("_captcha", "false");
-        formData.append("_subject", "【ポートフォリオ】新規お問い合わせ");
+        formData.append("_captcha", "false"); // Disable catcha for smooth UX
+        formData.append("_subject", "【ポートフォリオサイト】新規お問い合わせ"); // Custom email subject
 
         try {
+          // Post form asynchronously to FormSubmit using Fetch
           const response = await fetch(
             "https://formsubmit.co/ajax/mt.hinano@gmail.com",
             {
               method: "POST",
-              headers: { Accept: "application/json" },
+              headers: {
+                Accept: "application/json",
+              },
               body: formData,
             },
           );
 
           if (response.ok) {
+            // Update and show standard styled success toast
             successToast.className =
               "mt-8 border border-brand-accent/50 bg-brand-bg p-6 text-center text-brand-accent max-w-lg mx-auto";
             successToast.innerHTML = `
-              <i data-lucide="check" class="w-4 h-4 mx-auto mb-3"></i>
-              <p class="text-xs tracking-wider">メッセージが送信されました。内容を確認のうえ、折り返しご連絡いたします。</p>
-            `;
+                        <i data-lucide="check" class="w-4 h-4 mx-auto mb-3"></i>
+                        <p class="text-xs tracking-wider">メッセージが正常に送信されました。内容を確認の上、折り返しご連絡いたします。</p>
+                    `;
+            // Render icons inside Toast
             lucide.createIcons();
             successToast.classList.remove("hidden");
             form.reset();
           } else {
-            throw new Error("Submission rejected.");
+            throw new Error("FormSubmit rejected the submission.");
           }
         } catch (error) {
-          console.error(error);
+          console.error("Submission Error:", error);
+          // Update and show failure toast
           successToast.className =
             "mt-8 border border-red-200 bg-brand-bg p-6 text-center text-red-500 max-w-lg mx-auto";
           successToast.innerHTML = `
-            <i data-lucide="alert-triangle" class="w-4 h-4 mx-auto mb-3 text-red-500"></i>
-            <p class="text-xs tracking-wider">送信エラーが発生しました。時間を置いて再度お試しください。</p>
-          `;
+                    <i data-lucide="alert-triangle" class="w-4 h-4 mx-auto mb-3 text-red-500"></i>
+                    <p class="text-xs tracking-wider">送信中にエラーが発生しました。時間を置いて再度お試しください。</p>
+                `;
           lucide.createIcons();
           successToast.classList.remove("hidden");
         } finally {
+          // Restore button state
           submitBtn.textContent = originalBtnText;
           submitBtn.disabled = false;
+
+          // Auto-hide toast after 7 seconds
           setTimeout(() => {
             successToast.classList.add("hidden");
           }, 7000);
         }
       }
 
+      // Initialize Lucide Icons
       window.onload = function () {
         lucide.createIcons();
+        initPortfolioCarousels();
       };
     </script>
   </body>
