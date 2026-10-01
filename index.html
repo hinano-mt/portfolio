@@ -302,7 +302,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/applpfv.jpeg"
                 alt="WAKASA App Store LP"
                 loading="lazy"
@@ -341,7 +341,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/fukubukuro_omote.jpg"
                 alt="福袋同封あいさつ状 表"
                 loading="lazy"
@@ -380,7 +380,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/poster.jpg"
                 alt="Poster"
                 loading="lazy"
@@ -419,7 +419,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/KarinNighterPoster.jpg"
                 alt="Karin Nighter Poster"
                 loading="lazy"
@@ -458,7 +458,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/PinkAce.jpg"
                 alt="Pink Ace"
                 loading="lazy"
@@ -497,7 +497,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/BlueLemonade.jpg"
                 alt="Blue Lemonade"
                 loading="lazy"
@@ -536,7 +536,7 @@
               class="item-image-wrapper aspect-square bg-[#FAF8F5] border border-brand-border/60 relative flex items-center justify-center overflow-hidden"
             >
               <img
-                class="item-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                class="item-image w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 src="images/OrangeFizz.jpg"
                 alt="Orange Fizz"
                 loading="lazy"
@@ -1674,6 +1674,8 @@
             {
               src: "images/applpfv.jpeg",
               alt: "WAKASA App Store LP ヒーローイメージ",
+              objectFit: "contain",
+              objectPosition: "center",
             },
           ],
         },
@@ -1690,26 +1692,14 @@
             {
               src: "images/fukubukuro_omote.jpg",
               alt: "福袋同封あいさつ状 表面",
+              objectFit: "contain",
+              objectPosition: "center",
             },
             {
               src: "images/fukubukuro_ura.jpg",
               alt: "福袋同封あいさつ状 裏面",
-            },
-          ],
-        },
-        14: {
-          category: "Graphic Design",
-          title: "ポスター",
-          client: "Personal",
-          role: "Poster Design",
-          duration: "Personal Project",
-          deliverables: "Poster Artwork, B2 Print",
-          overview:
-            "バランスと色彩を探求する、抽象的な幾何学ポスター。シンプルな図形と調和のとれた配色に焦点を当てた、個人の制作プロジェクト。",
-          images: [
-            {
-              src: "images/poster.jpg",
-              alt: "Shapes of Balance Poster",
+              objectFit: "contain",
+              objectPosition: "center",
             },
           ],
         },
@@ -1726,6 +1716,8 @@
             {
               src: "images/KarinNighterPoster.jpg",
               alt: "花鈴のナイターイベント ポスター",
+              objectFit: "contain",
+              objectPosition: "center",
             },
           ],
         },
@@ -1742,6 +1734,8 @@
             {
               src: "images/PinkAce.jpg",
               alt: "Pink Ace ドリンクビジュアル",
+              objectFit: "contain",
+              objectPosition: "center",
             },
           ],
         },
@@ -1758,6 +1752,8 @@
             {
               src: "images/BlueLemonade.jpg",
               alt: "Blue Lemonade ドリンクビジュアル",
+              objectFit: "contain",
+              objectPosition: "center",
             },
           ],
         },
@@ -1774,6 +1770,8 @@
             {
               src: "images/OrangeFizz.jpg",
               alt: "Orange Fizz ドリンクビジュアル",
+              objectFit: "contain",
+              objectPosition: "center",
             },
           ],
         },
